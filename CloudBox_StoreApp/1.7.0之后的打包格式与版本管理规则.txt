@@ -1,0 +1,19 @@
+1.7.0之前打包格式：CloudBox_StoreApp_1.3.1_SVN4948_测试服.apk
+版本发布后在release_svn_mappings写上该发布版本对应的SVN修订号，如：1.4.0 ------->>  SVN5637（1.7.0之后不需要更新这个文件）
+
+1.7.0之后打包格式：
+正式服：CloudBox_StoreApp_1.7.0.001_branch_SVN7768_正式服.apk
+测试服：CloudBox_StoreApp_1.7.0.001_branch_SVN7765_测试服.apk
+
+SVN版本控制管理说明：
+CloudBox_StoreApp目录下分有4个子目录。
+	trunk：为主目录，里面放的是最新完整的项目包，当branch的支项目开发完之后，需要合并到这个目录下。
+	branch：为支目录，该目录的项目从trunk主目录分出来，用于开发使用，开发完之后，需要合并到trunk目录下。
+	tags：该目录存放各个版本发布后的包名，方便以后查看某版本的功能。
+	doc：目录下存放该项目的开发文档、应用逻辑文档、应用开发流程图等文件。
+	
+注意：
+	1、trunk、branch这两个目录的代码务必都是正式服的地址和正式服的第三方集成SDK的key
+	2、部分第三方集成SDK的key、id存放在strings_key.xml目录下
+	3、打包需要确保BaiDuCloudSearchActivity.java下的ak、geoTableId是正式服还是测试服
+	4、版本发布之后，需要第一时间把trunk、branch、tags这三个目录的版本整理好，以免和后面的开发发生冲突
